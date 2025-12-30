@@ -1,0 +1,4 @@
+package com.example.addove.dao;
+
+public interface userSignUp {
+}
