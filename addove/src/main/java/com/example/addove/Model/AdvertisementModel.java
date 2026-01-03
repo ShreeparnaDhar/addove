@@ -1,27 +1,33 @@
 package com.example.addove.Model;
 
-import java.sql.Date;
-import java.util.List;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.Date;
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Document(collection = "advertisement")   
 public class AdvertisementModel {
-    String adTitle;
-    String productPromotionType;
-    String adSpaces;
-    String adSpaceDescription;
-    String productPromotionFormat;
-    String Region_City;
-    String category;
-    String targetAuxdienceAge;
-    String MonthlyTraffic;
-    String AdditonalRequirements;
-    Date startDate;
-    Date endDate;
-    List<BudgetAndTime> budgetAndTime;
 
+    @Id
+    private String id;                     
+    private String adTitle;
+    private String productPromotionType;
+    private String adSpaces;
+    private String adSpaceDescription;
+    private String productPromotionFormat;
+    private String regionCity;
+    private String category;
+    private String targetAudienceAge;
+    private String monthlyTraffic;
+    private String additionalRequirements;
+    private Date startDate;
+    private Date endDate;
+    private List<BudgetAndTime> budgetAndTime;
 }

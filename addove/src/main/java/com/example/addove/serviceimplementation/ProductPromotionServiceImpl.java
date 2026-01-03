@@ -20,13 +20,13 @@ import org.springframework.stereotype.Service;
 public class ProductPromotionServiceImpl implements ProductPromotionService {
 
     @Override
-    public List<ProductModel> CreateProductProduction() {
-        List<ProductModel>     productList = new ArrayList<>();
-        if (productList.isEmpty()) {
+    public List<ProductModel> CreateProductProduction(List<ProductModel> list) {
+        
+        if (list.isEmpty()) {
             throw new RuntimeException("No Products Available");
         }
         else{
-            
+                
         }
 
 
@@ -35,10 +35,8 @@ public class ProductPromotionServiceImpl implements ProductPromotionService {
     }
 
     @Override
-    public List<AdvertisementModel> CreateAdvertisementSpace() {
+    public List<String> CreateAdvertisementSpace(List<AdvertisementModel> list) {
         // TODO Auto-generated method stub
         return null;
     }
-
-       
 }
